@@ -68,14 +68,8 @@
 	stp \ptr, \regB, [\regC], \val
 	.endm
 
-<<<<<<< HEAD
-	.weak memcpy
-ENTRY(__memcpy)
-ENTRY(memcpy)
-=======
 ENTRY(__memcpy)
 WEAK(memcpy)
->>>>>>> 3da21b289 (kernel: fix fatal error)
 #include "copy_template.S"
 	ret
 ENDPIPROC(memcpy)
