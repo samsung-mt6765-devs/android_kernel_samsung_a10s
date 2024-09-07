@@ -232,11 +232,7 @@ AES_ENTRY(aes_ctr_encrypt)
 	bmi		.Lctr1x
 	cmn		w6, #4			/* 32 bit overflow? */
 	bcs		.Lctr1x
-<<<<<<< HEAD
-	ldr		q8, x30000000200000001	/* addends 1,2,3[,0] */
-=======
 	ldr		q8, .Laddends /* addends 1,2,3[,0] */
->>>>>>> 3da21b289 (kernel: fix fatal error)
 	dup		v7.4s, w6
 	mov		v0.16b, v4.16b
 	add		v7.4s, v7.4s, v8.4s
@@ -299,14 +295,11 @@ AES_ENTRY(aes_ctr_encrypt)
 	rev		x7, x7
 	ins		v4.d[0], x7
 	b		.Lctrcarrydone
-<<<<<<< HEAD
-=======
 .Laddends:
 	.word	0x00000001
 	.word	0x00000002
 	.word	0x00000003
 	.word	0x00000000
->>>>>>> 3da21b289 (kernel: fix fatal error)
 AES_ENDPROC(aes_ctr_encrypt)
 	.ltorg
 
