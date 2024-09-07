@@ -373,11 +373,7 @@ else
 HOSTCC	= gcc
 HOSTCXX	= g++
 endif
-<<<<<<< HEAD
-KBUILD_HOSTCFLAGS   := -Wall -Wmissing-prototypes -Wno-strict-prototypes -O2 \
-=======
 KBUILD_HOSTCFLAGS   := -Wall -Wno-visibility -Wno-unused-variable -Wmissing-prototypes -Wno-strict-prototypes -O2 \
->>>>>>> 3da21b289 (kernel: fix fatal error)
 		-fomit-frame-pointer -std=gnu89 $(HOST_LFS_CFLAGS) \
 		$(HOSTCFLAGS)
 KBUILD_HOSTCXXFLAGS := -O2 $(HOST_LFS_CFLAGS) $(HOSTCXXFLAGS)
@@ -406,18 +402,6 @@ READELF		= $(CROSS_COMPILE)readelf
 OBJSIZE		= $(CROSS_COMPILE)size
 STRIP		= $(CROSS_COMPILE)strip
 endif
-CC		= clang
-LD		= aarch64-linux-gnu-ld
-LDGOLD		= aarch64-linux-gnu-ld.gold
-AR		= aarch64-linux-gnu-ar
-NM		= aarch64-linux-gnu-nm
-OBJCOPY		= aarch64-linux-gnu-objcopy
-OBJDUMP		= aarch64-linux-gnu-objdump
-READELF		= aarch64-linux-gnu-readelf
-OBJSIZE		= aarch64-linux-gnu-size
-STRIP		= aarch64-linux-gnu-strip
-AS		= aarch64-linux-gnu-as
->>>>>>> 3da21b289 (kernel: fix fatal error)
 CPP		= $(CC) -E
 LEX		= flex
 YACC		= bison
