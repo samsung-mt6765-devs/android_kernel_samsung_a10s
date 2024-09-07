@@ -54,9 +54,14 @@ dst		.req	x8
 tmp3w		.req	w9
 tmp3		.req	x9
 
+<<<<<<< HEAD
 	.weak memset
 ENTRY(__memset)
 ENTRY(memset)
+=======
+ENTRY(__memset)
+WEAK(memset)
+>>>>>>> 3da21b289 (kernel: fix fatal error)
 	mov	dst, dstin	/* Preserve return value.  */
 	and	A_lw, val, #255
 	orr	A_lw, A_lw, A_lw, lsl #8
