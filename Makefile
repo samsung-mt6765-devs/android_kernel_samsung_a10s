@@ -385,7 +385,6 @@ KBUILD_HOSTLDFLAGS  := $(HOST_LFS_LDFLAGS) $(HOSTLDFLAGS)
 KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 
 # Make variables (CC, etc...)
-<<<<<<< HEAD
 ifneq ($(LLVM),)
 CC		= clang
 LD		= ld.lld
@@ -407,7 +406,6 @@ READELF		= $(CROSS_COMPILE)readelf
 OBJSIZE		= $(CROSS_COMPILE)size
 STRIP		= $(CROSS_COMPILE)strip
 endif
-=======
 CC		= clang
 LD		= aarch64-linux-gnu-ld
 LDGOLD		= aarch64-linux-gnu-ld.gold
@@ -462,11 +460,7 @@ LINUXINCLUDE    := \
 		$(USERINCLUDE)
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__
-<<<<<<< HEAD
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-=======
 KBUILD_CFLAGS   := -Wall -Wno-visibility -Wno-unused-variable -Wundef -Wno-strict-prototypes -Wno-trigraphs \
->>>>>>> 3da21b289 (kernel: fix fatal error)
 		   -fno-strict-aliasing -fno-common -fshort-wchar \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
