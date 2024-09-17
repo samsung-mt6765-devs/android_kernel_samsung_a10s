@@ -5553,3 +5553,10 @@ CONFIG_CORESIGHT_STM=y
 # Utsname spoof
 #
 CONFIG_UTSNAME_SPOOF=y
+
+#
+# Clang optimizations
+#
+CONFIG_LLVM_POLLY=y
+CONFIG_LTO=y
+CONFIG_THIN_LTO=y
